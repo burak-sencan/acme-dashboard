@@ -1,13 +1,53 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/*Button*/
+.custom-button {
+  color: white;
+  background: rgb(85, 85, 85);
+  background: linear-gradient(180deg, rgba(85, 85, 85, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  padding: 8px 20px;
+
+  border-radius: 5px;
+
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  transition: all 0.3s ease-in-out;
+}
+.custom-button:hover {
+  color: #3cc53e;
+  box-shadow: none;
+}
+.custom-button:active {
+  outline: none;
+  background: linear-gradient(180deg, rgba(85, 85, 85, 1) 0%, rgba(0, 0, 0, 1) 50%);
+}
+
+/*Time Values*/
+.time-val {
+  font-size: 3rem;
+}
+.custom-shadow {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+/*Bitcoin Prices*/
+@keyframes glimpseAnimation {
+  0% {
+    color: rgb(120 113 108);
+  }
+  100% {
+    color: rgb(255, 255, 255);
+  }
+}
+.glimpse {
+  animation-name: glimpseAnimation;
+  animation-duration: 0.3s;
+  animation-iteration-count: 2;
 }
